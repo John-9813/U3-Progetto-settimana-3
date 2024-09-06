@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setSearchResults } from '../redux/reducers/searchReducer';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   const [query, setQuery] = useState('');
@@ -17,9 +17,9 @@ const Sidebar = () => {
     <aside className="col col-2">
       <nav className="navbar navbar-expand-md fixed-left justify-content-between" id="sidebar">
         <div className="container flex-column align-items-start">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" to="/">
             <img src="/logo.png" alt="Spotify Logo" width="131" height="40" />
-          </a>
+          </Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -27,14 +27,14 @@ const Sidebar = () => {
             <div className="navbar-nav">
               <ul>
                 <li>
-                  <a className="nav-item nav-link d-flex align-items-center" href="#">
+                  <Link className="nav-item nav-link d-flex align-items-center" to="/">
                     <i className="bi bi-house-door-fill"></i> Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="nav-item nav-link d-flex align-items-center" href="#">
+                  <Link className="nav-item nav-link d-flex align-items-center" to="/library">
                     <i className="bi bi-book-fill"></i> Your Library
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <div className="input-group mt-3">
@@ -52,7 +52,7 @@ const Sidebar = () => {
           <button className="btn signup-btn" type="button">Sign Up</button>
           <button className="btn login-btn" type="button">Login</button>
           <div>
-          <a href="#">Cookie Policy</a> | <a href="#"> Privacy</a>
+            <a href="#">Cookie Policy</a> | <a href="#"> Privacy</a>
           </div>
         </div>
       </nav>
@@ -61,5 +61,7 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
+
 
 

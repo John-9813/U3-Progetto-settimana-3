@@ -6,6 +6,7 @@ const initialSongs = [
   { id: 3, title: 'Lose Yourself', artist: 'Eminem', album: { cover: 'https://e-cdns-images.dzcdn.net/images/cover/e2b36a9fda865cb2e9ed1476b6291a7d/250x250-000000-80-0-0.jpg' } },
 
 ];
+// potevo fare meglio ma ero veramente a corto di tempo per una serie di problemi
 
 const searchSlice = createSlice({
   name: 'search',
